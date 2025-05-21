@@ -11,7 +11,7 @@ interface ProductImageCarouselProps {
 export function ProductCarousel({ images }: ProductImageCarouselProps) {
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const [isTransitioning, setIsTransitioning] = React.useState(false);
-  console.log({ images });
+
   const nextImage = () => {
     setIsTransitioning(true);
     setTimeout(() => {

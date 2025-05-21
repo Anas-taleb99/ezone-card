@@ -15,7 +15,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
     queryKey: ["shop"],
     queryFn: () => getrequestShopId(window.location.origin),
   });
-  console.log({ data });
+
   useEffect(() => {
     if (!data?.data.Data.Id) return;
     cookie.set("shopId", data.data.Data.Id.toString());
@@ -32,7 +32,11 @@ export const useShop = () => React.useContext(ShopContext);
 
 export const ShopLink = () => {
   const shop = useShop();
-  console.log({ shop });
+
   if (!shop) return null;
-  return <Link href="/products/5516" className="underline">{shop.Name}</Link>;
+  return (
+    <Link href="/products/5516" className="underline">
+      {shop.Name}
+    </Link>
+  );
 };

@@ -11,8 +11,6 @@ export default async function ProductDetailsPage({
 
   const res = await getProductDetail(id);
 
-  console.log({res});
-
   if (res == null) return <div>Product Not Found</div>;
   return (
     <div className="flex justify-center w-6xl mx-auto mt-10">
