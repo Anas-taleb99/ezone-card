@@ -1,0 +1,1 @@
+export { ProductDetailsWidget } from "./product-details-widget"
