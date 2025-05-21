@@ -31,14 +31,13 @@ export function ProductCarousel({ images }: ProductImageCarouselProps) {
   };
 
   return (
-    <div className="relative w-[377px] h-[377px] shrink-0 bg-gray-200 rounded-lg overflow-hidden">
+    <div className="relative w-full h-[377px] shrink-0 bg-gray-200 rounded-lg overflow-hidden">
       <Image
         src={getProductImageUrl(images[currentImageIndex].Src)}
         alt={`Product image ${currentImageIndex + 1}`}
         fill
         priority
-        sizes="(max-width: 377px) 100vw, 377px"
-        className={`object-cover transition-opacity duration-300 ${
+        className={`object-cover transition-opacity duration-300 w-full object-cover ${
           isTransitioning ? "opacity-0" : "opacity-100"
         }`}
       />

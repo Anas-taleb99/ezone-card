@@ -22,9 +22,9 @@ export function ProductDetailsWidget({ data }: { data: TProduct }) {
         <h1 className="text-2xl font-bold text-[#6b7280]">{data.Name}</h1>
       </div>
       <Card className="w-full">
-        <div className="flex gap-4">
+        <div className="flex lg:flex-row flex-col gap-4">
           {/* carousel */}
-          <div className="w-[377px] h-[377px] shrink-0 bg-gray-200 rounded-lg">
+          <div className="w-full overflow-hidden lg:w-[377px] h-[377px] shrink-0 bg-gray-200 rounded-lg">
             {/* img be placed here */}
             <ProductCarousel images={data.ProductImages} />
           </div>

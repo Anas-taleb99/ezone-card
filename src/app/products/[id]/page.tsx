@@ -13,7 +13,7 @@ export default async function ProductDetailsPage({
 
   if (res == null) return <div>Product Not Found</div>;
   return (
-    <div className="flex justify-center w-6xl mx-auto mt-10">
+    <div className="flex justify-center container lg:w-6xl mx-auto mt-10 p-4">
       <ProductDetailsWidget data={res.Data.Product} />
     </div>
   );
