@@ -19,7 +19,7 @@ export function ShopProvider({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     if (!data?.data.Data.Id) return;
     cookie.set("shopId", data.data.Data.Id.toString());
-  }, [data?.data.Data.Id]);
+  }, [data?.data.Data.Id, cookie]);
 
   return (
     <ShopContext.Provider value={data?.data.Data}>

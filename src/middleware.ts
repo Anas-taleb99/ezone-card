@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
 export async function middleware(request: NextRequest) {
-  let response = NextResponse.next();
+  const response = NextResponse.next();
 
   // Define paths to exclude (e.g., static files, API routes, _next folder)
   const excludedPaths = ["/api/", "/_next/", "/static/", "/favicon.ico"];

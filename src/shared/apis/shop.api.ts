@@ -1,6 +1,5 @@
 import axios from "axios";
 import { Config } from "../config";
-import { axiosInstance } from "./axios-interceptor";
 
 const baseUrl = `${Config.rootUrl}/Shop`;
 
